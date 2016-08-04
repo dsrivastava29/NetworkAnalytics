@@ -4197,16 +4197,19 @@ textarea.input-group-sm > .input-group-btn > .btn {
   padding: 15px 15px;
   font-size: 18px;
   line-height: 20px;
+  color: #0F0;
 }
 
 .navbar-brand:hover,
 .navbar-brand:focus {
   text-decoration: none;
+   color: #0F0;
 }
 
 @media (min-width: 768px) {
   .navbar > .container .navbar-brand {
     margin-left: -15px;
+    color: #000;
   }
 }
 

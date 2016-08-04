@@ -26,6 +26,15 @@ textarea {
   background-color: #10A7AF;
   border-color: #080808;
 }
+
+.myhead {
+      float: left;
+  padding: 15px 15px;
+  font-size: 18px;
+  line-height: 20px;
+  color: #002;
+}
+
 /* Set padding to display errors that occur during databinding */
 .padding-error {
     padding-top: 20px;
