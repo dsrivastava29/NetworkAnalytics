@@ -30,9 +30,9 @@ textarea {
 .myhead {
       float: left;
   padding: 15px 15px;
-  font-size: 18px;
+  font-size: 40px;;
   line-height: 20px;
-  color: #002;
+  color: #666666;
 }
 
 /* Set padding to display errors that occur during databinding */
