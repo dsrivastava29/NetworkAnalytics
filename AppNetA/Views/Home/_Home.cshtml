@@ -1,39 +1,48 @@
 ﻿<!-- ko with: home -->
-<div class="jumbotron" style="background:url(../../Content/networking-world.png); color:#FFF;">
-    
-    <br /><br /><br /><br /><br /><br /><br />
-   
-   </div>
-<div>
+<div class="jumbotron row" style="background:url(../../Content/networking-world.png); color:#FFF;">
+
+    <br /><br /><br /><br /><br /><br />
+
+</div>
+<div class="row">
     <h1> Telecom Italia </h1>
-    <p class="lead">We have used Teecom Italia dataset for prediction. Some random shht here</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Predict &raquo;</a></p>
+    <p class="lead">
+        The study of socio-technical systems has been revolutionized by the unprecedented amount of digital records that are constantly being produced
+        by human activities such as accessing Internet services, using mobile devices, and consuming energy and knowledge. In this paper, we describe the richest open
+        multisource dataset ever released on two geographical areas. The dataset is composed of telecommunications, weather, news, social networks and electricity data
+        from the city of Milan and the Province of Trentino.
+    </p>
+    <marquee>
+        <h5>
+            In this case study, we focus only on the Internet and mobile activities in the Province of Trentino. Our analysis is based on Incoming and Outgiong SMS, Incoming and outgoing Call Activities and Internet Activities.
+        </h5>
+    </marquee>
+    <p><a class="btn btn-default" href="@Url.Action("GetPDF")" target="_blank" style="float: inherit;">Click here to view full report &raquo;</a></p>
 </div>
 <div class="row" style="height:50%; border:double;">
     <div class="col-md-4">
         <h2>Summary</h2>
         <p>This section shows the summary section of our analysis.</p>
         <p data-bind="text: myHometown"></p>
-       
         <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=273732">Learn more &raquo;</a></p>
     </div>
 
     <div class="col-md-4" style="border:medium;border-color:black;">
         <h2>Visualizations</h2>
         <p>
-            Original data and its visualization.
+            We have used the cleansed data to visualize and draw patterns about the mobile network activities in the Province of Trentino.
         </p>
-        <button class="btn btn-default" data-toggle="collapse" data-target="#demo">Learn More</button>
-        <div id="demo" class="collapse">
-            Click on folllowing to view
-        </div>
+        <p><a class="btn btn-default" href="../Home/Visualize">Power BI Visualization &raquo;</a></p>
     </div>
 
     <div class="col-md-4">
         <h2>Evaluate Models</h2>
         <p>Evaluation of models and their values.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+
+        <p><a class="btn btn-default" href="../Predict/Regression">Regression &raquo;</a></p>
+        <p><a class="btn btn-default" href="../Predict/Classify">Classification &raquo;</a></p>
     </div>
+
 </div>
 
 <!-- /ko -->

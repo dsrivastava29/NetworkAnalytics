@@ -1,0 +1,48 @@
+﻿@model AppNetA.Models.PredictModel
+
+@{
+    ViewBag.Title = "Power BI Visualization";
+}
+<br /><br />
+<h2>@ViewBag.Title</h2>
+
+<div class="row" style="border:double;">
+    <div class="col-md-8">
+        <iframe width="800" height="600" src="https://app.powerbi.com/view?r=eyJrIjoiZmQ5YWQ4MzAtZDg2Mi00YThjLWE3YTAtZDZmMmQ5ODQ4ZDkyIiwidCI6IjZhYmZjNzNmLWRhNjQtNDEzNy05ZjlmLTE1ZmFhZTU2ZjY4NSIsImMiOjN9" frameborder="0" allowFullScreen="true"></iframe>
+    </div>
+    <div class="col-md-4">
+        <h3 style="background-color:#10A7AF; color:white">Graph 1</h3>
+        <p> The below graph shows that sms, call and internet activities are high between Trento and France (country code 33) 
+        than Trento and Spain (country code 34) or Trento and United State of America (country code 1).</p>
+        <br />
+        <h3 style="background-color:#10A7AF; color:white">Graph 2</h3>
+        <p>
+            The below graph shows that sms, call and internet activities varying between square IDs. Orange colour represents low activities and grey represents high activities.
+        </p>
+        <br />
+        <h3 style="background-color:#10A7AF; color:white">Graph 3</h3>
+        <p>
+            The below graph shows that sms out, call out and internet activities by the day. With 21st of November having a high
+             internet traffic activity. But this can’t be generalized as we have limited data of just one month.
+        </p>
+        <br />
+        <h3 style="background-color:#10A7AF; color:white">Graph 4</h3>
+        <p>
+            The below graph shows Call out activity, Internet traffic activity and SMS out activity by dayOfWeek. As shown in the graph, 
+            there is a rise as the week proceeds with Friday (dayOfWeek -> 5) recording the highest activity values.
+        </p>
+        <br />
+        <h3 style="background-color:#10A7AF; color:white">Graph 5</h3>
+        <p>
+            The below graph shows Call out activity, Internet traffic activity and SMS out activity by hour. As shown in the graph, 
+            there is a rise as the day proceeds but a sudden dip at 13 hours and then a rise again.
+        </p>
+
+    </div>
+
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+

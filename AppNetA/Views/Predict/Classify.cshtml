@@ -1,0 +1,98 @@
+﻿@model AppNetA.Models.PredictModel
+
+@{
+    ViewBag.Title = "Regression";
+}
+<br /><br /><br /><br />
+<h2>@ViewBag.Title.</h2>
+<div class="row" style="border:double;">
+    <div class="col-md-6">
+        @using (Html.BeginForm("Classify", "Predict", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+        {
+            @Html.AntiForgeryToken()
+            <h4>Enter values to get category </h4>
+            <hr />
+            @Html.ValidationSummary("", new { @class = "text-danger" })
+            <div class="form-group">
+                @Html.LabelFor(m => m.squareID, new { @class = "col-md-4 control-label" })
+                <div class="col-md-8">
+                    @Html.TextBoxFor(m => m.squareID, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.countryCode, new { @class = "col-md-4 control-label" })
+                <div class="col-md-8">
+                    @Html.TextBoxFor(m => m.countryCode, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.smsInActivity, new { @class = "col-md-4 control-label" })
+                <div class="col-md-8">
+                    @Html.TextBoxFor(m => m.smsInActivity, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.smsOutActivity, new { @class = "col-md-4 control-label" })
+                <div class="col-md-8">
+                    @Html.TextBoxFor(m => m.smsOutActivity, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.callInActivity, new { @class = "col-md-4 control-label" })
+                <div class="col-md-8">
+                    @Html.TextBoxFor(m => m.callInActivity, new { @class = "form-control" })               
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.callOutActivity, new { @class = "col-md-4 control-label" })
+                <div class="col-md-8">
+                    @Html.TextBoxFor(m => m.callOutActivity, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.internetTrafficActivity, new { @class = "col-md-4 control-label" })
+                <div class="col-md-8">
+                    @Html.TextBoxFor(m => m.internetTrafficActivity, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.date, new { @class = "col-md-4 control-label" })
+                <div class="col-md-8">                    
+                  @Html.EditorFor(m => m.date, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(m => m.hour, new { @class = "col-md-4 control-label" })
+                    <div class="col-md-8">
+                        @Html.TextBoxFor(m => m.hour, new { @class = "form-control" })
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" class="btn btn-default" value="Get prediction" />
+                </div>
+            </div>
+            <a href="../Excel/ExcelResult" target="_blank">Available December data - To use for above prediction (Top 100 rows)</a>
+        }
+    </div>
+    <div class="col-md-6 form-horizontal">
+        <h4> Network Activity Prediction  </h4>
+        <br /><br /><br/><br />
+        <h2>
+            Classified Category : @Html.DisplayFor(m => m.category)
+        </h2>
+        <br/>
+        <h2>
+            Probability : @Html.DisplayFor(m => m.probability)
+        </h2>
+    </div>
+
+    </div> 
+
+
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }
