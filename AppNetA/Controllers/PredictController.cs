@@ -28,7 +28,7 @@ namespace AppNetA.Controllers
             return View();
         }
 
-        //
+        
         // POST: /PredictController/Regression
         [HttpPost]
         [AllowAnonymous]
@@ -40,6 +40,7 @@ namespace AppNetA.Controllers
             {
                 return View(model);
             }
+            //Invoke Azure service for regression model
             response =RegressionCallOutPrediction.PredictCallOutRegression(model);
             // If we got this far, something failed, redisplay form
             if (response != "Error")
@@ -66,6 +67,7 @@ namespace AppNetA.Controllers
                 return View(model);
             }
             string response = "";
+            //Invoke Azure service for classification
             response = ClassificationActivity.Classify(model);
             string[] values = response.Split('-');
 
