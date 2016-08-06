@@ -52,7 +52,8 @@ namespace AppNetA.Controllers
                 const string apiKey = "s8MYd8qKR47LhrTvmF1vTh/a1VhhtyAE9pBN0n/hRhlXG88hCHgO8YnlgMMOl7N118XicbEWBCmeHxiTiQpxDA=="; // Replace this with the API key for the web service
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", apiKey);
 
-                client.BaseAddress = new Uri("https://ussouthcentral.services.azureml.net/workspaces/27283ce47c2b45d4af792fcf22e0cedd/services/6ee781edc6fb402d9185a0462e380d03/execute?api-version=2.0&details=true");
+                client.BaseAddress = new Uri("https://ussouthcentral.services.azureml.net/workspaces/27283ce47c2b45d4af792fcf22e0cedd/services/ac33e8d97d224a18876f9aa484993d2d/execute?api-version=2.0&details=true");
+
 
                 // WARNING: The 'await' statement below can result in a deadlock if you are calling this code from the UI thread of an ASP.Net application.
                 // One way to address this would be to call ConfigureAwait(false) so that the execution does not attempt to resume on the original context.

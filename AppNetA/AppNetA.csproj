@@ -331,8 +331,8 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Content\Excel\DecemberFilteredMonthlyNetworkData.csv" />
     <Content Include="Content\Report.pdf" />
+    <Content Include="Content\Excel\DecemberFilteredMonthlyNetworkData.csv" />
     <None Include="Properties\PublishProfiles\MyNetApp123.pubxml" />
     <None Include="Properties\PublishProfiles\NetworkTelecomPrediction.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
