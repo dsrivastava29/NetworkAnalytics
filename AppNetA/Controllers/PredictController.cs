@@ -35,7 +35,12 @@ namespace AppNetA.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Regression(PredictModel model)
         {
-            string response = RegressionCallOutPrediction.PredictCallOutRegression(model);
+            string response = "";
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+            response =RegressionCallOutPrediction.PredictCallOutRegression(model);
             // If we got this far, something failed, redisplay form
             if (response != "Error")
             {
@@ -56,7 +61,12 @@ namespace AppNetA.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Classify(PredictModel model)
         {
-            string response = ClassificationActivity.Classify(model);
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+            string response = "";
+            response = ClassificationActivity.Classify(model);
             string[] values = response.Split('-');
 
             // If we got this far, something failed, redisplay form
